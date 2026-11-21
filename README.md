@@ -142,3 +142,31 @@ Starting and ending at **Dreamyard Udaipur** (Hanuman Ghat, Lake Pichola), this 
    ```
 
 3. Open **http://localhost:5173** in your browser. Everything works instantly with zero setup or API keys!
+
+---
+
+## ⚡ 1-Click Vercel Deployment Guide
+
+1. Go to **[vercel.com/new](https://vercel.com/new)**.
+2. Select your repository: **`teralyxaaaa-gif/CHALO-CHALTE-HAIN`**.
+3. In **Project Name**, enter lowercase name: **`chalo-chal-te-hain`** or **`route-planner`**.
+   *(Note: Vercel requires project names to be lowercase without spaces).*
+4. Framework is automatically detected as **Vite** via `vercel.json`.
+5. Build settings are pre-configured:
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+6. (Optional) Add Environment Variable:
+   - `VITE_CARTO_API_KEY`: `cb1_5ddb_1_4f40c7640e7b61fe89b7b13e`
+7. Click **Deploy**. Your app will be live on `https://your-project.vercel.app` in ~30 seconds!
+
+---
+
+## 🌐 Netlify Deployment Guide
+
+1. Go to **[app.netlify.com/start](https://app.netlify.com/start)**.
+2. Select **`teralyxaaaa-gif/CHALO-CHALTE-HAIN`**.
+3. All build settings are pre-configured via `netlify.toml`:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+4. Click **Deploy**. Your site will be live!
+
