@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  body {
+    @apply bg-cream-100 text-charcoal-900 font-sans antialiased;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Custom Leaflet Map styling adjustments */
+.leaflet-container {
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.25rem;
+  z-index: 10;
+}
+
+.custom-road-marker {
+  background: transparent;
+  border: none;
+}
+
+/* Hide scrollbar for clean tab pill rows */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Enhanced Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(197, 154, 69, 0.4), 0 0 30px rgba(197, 154, 69, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(197, 154, 69, 0.7), 0 0 45px rgba(197, 154, 69, 0.35);
+  }
+}
+
+@keyframes floatBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+.animate-floatBob {
+  animation: floatBob 3s ease-in-out infinite;
+}
+
+/* Luxury Touch Tap targets */
+button, a, input, select {
+  touch-action: manipulation;
+}
+
+/* Mobile Safe Area helper */
+.pb-safe {
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+}
